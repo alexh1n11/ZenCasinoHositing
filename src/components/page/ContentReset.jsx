@@ -50,7 +50,7 @@ const ContentReset = ({setLoginClicked, setResetClicked}) => {
                     </svg>
                     Back
                 </button>
-                <div className={styles.logo}></div>
+                
                 <div className={styles.title}>
                     
                     <p className={styles.title1}>RESET PASSWORD</p>
