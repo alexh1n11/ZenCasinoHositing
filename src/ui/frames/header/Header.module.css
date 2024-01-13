@@ -130,7 +130,7 @@
 
 }
 
-@media (max-width: 390px) {
+@media (max-width: 425px) {
     .header{
         display: flex;
         align-items: center;

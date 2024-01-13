@@ -442,7 +442,7 @@
     stroke: #9CA3BD;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 425px) {
     .cashback{
         position: relative;
         display: flex;

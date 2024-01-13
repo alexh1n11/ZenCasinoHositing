@@ -26,7 +26,7 @@ const Page = ({rootWidth}) => {
     setActiveContent(contentId);
   }, []);
 
-  PageUseEffect(isFirstRun, widgetCollapse, setScale);
+  PageUseEffect(isFirstRun, widgetCollapse, setScale, setActiveContent);
 
   const toggleCasinoOrSport = useCallback(() => {
     setCasinoOrSport((prevState) => !prevState);
@@ -49,9 +49,9 @@ const Page = ({rootWidth}) => {
       <Sidebar casinoOrSport={casinoOrSport} setActiveContent={handleContentChange} rootWidth={rootWidth} handleWidgetCollapse={handleWidgetCollapse}/>
       <div className={styles.workzone} style={{ zoom: scale}}>
 
-        {registerClicked ? <RegisterPopUp registerClicked ={registerClicked} setRegisterClicked ={setRegisterClicked} loginClicked ={loginClicked} setLoginClicked ={setLoginClicked}/> : null}
+        {registerClicked ? <RegisterPopUp setRegisterClicked ={setRegisterClicked} setLoginClicked ={setLoginClicked}/> : null}
         
-        {loginClicked ? <LoginPopUp loginClicked ={loginClicked} setLoginClicked ={setLoginClicked} registerClicked ={registerClicked} setRegisterClicked ={setRegisterClicked} userLogged= {userLogged} setUserLogged = {setUserLogged}/> : null}
+        {loginClicked ? <LoginPopUp loginClicked ={loginClicked} setLoginClicked ={setLoginClicked} registerClicked ={registerClicked} setRegisterClicked ={setRegisterClicked} setUserLogged = {setUserLogged}/> : null}
         
         <Header casinoOrSport={casinoOrSport} toggleCasinoOrSport={toggleCasinoOrSport} userLogged={userLogged} 
         registerClicked ={registerClicked} setRegisterClicked ={setRegisterClicked} loginClicked ={loginClicked} setLoginClicked ={setLoginClicked}/>

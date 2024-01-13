@@ -3,7 +3,7 @@ import styles from './LoginPopUp.module.css';
 import ContentLogIn from './ContentLogIn';
 import ContentReset from './ContentReset';
 
-const LoginPopUp = ({loginClicked, setLoginClicked, registerClicked, setRegisterClicked, userLogged, setUserLogged}) => {
+const LoginPopUp = ({loginClicked, setLoginClicked, registerClicked, setRegisterClicked, setUserLogged}) => {
     const [resetClicked, setResetClicked] = useState(false);
     const toggleLoginClicked = () => {
         setLoginClicked(false);

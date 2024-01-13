@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import styles from './LoginPopUp.module.css';
 
-const ContentReset = ({loginClicked, setLoginClicked, resetClicked, setResetClicked}) => {
+const ContentReset = ({setLoginClicked, setResetClicked}) => {
     const inputRefs = [useRef(), useRef(), useRef(), useRef()];
     const [code, setCode] = useState(['', '', '', '']);
     const [activeInput, setActiveInput] = useState(0);
@@ -10,7 +10,6 @@ const ContentReset = ({loginClicked, setLoginClicked, resetClicked, setResetClic
             return;
         }
       
-          // Проверка для разрешения ввода только в текущий активный инпут
         if (index !== activeInput) {
             return;
         }
@@ -19,13 +18,13 @@ const ContentReset = ({loginClicked, setLoginClicked, resetClicked, setResetClic
         newCode[index] = value;
         setCode(newCode);
       
-          // Переход к следующему инпуту при вводе значения
         if (index < inputRefs.length - 1 && value !== '') {
             setActiveInput(index + 1);
-            inputRefs[index + 1].current.focus();
+            const nextInput = inputRefs[index + 1].current;
+            nextInput.focus();
+            nextInput.select();
         }
       
-          // Переход к предыдущему инпуту при удалении значения
         if (index > 0 && value === '') {
             setActiveInput(index - 1);
             inputRefs[index - 1].current.focus();
@@ -51,8 +50,9 @@ const ContentReset = ({loginClicked, setLoginClicked, resetClicked, setResetClic
                     </svg>
                     Back
                 </button>
-
+                <div className={styles.logo}></div>
                 <div className={styles.title}>
+                    
                     <p className={styles.title1}>RESET PASSWORD</p>
                     <p className={styles.title2}>We have sent the code to your email, please enter code to the field below.</p>
                 </div>
@@ -62,6 +62,7 @@ const ContentReset = ({loginClicked, setLoginClicked, resetClicked, setResetClic
                             key={index}
                             ref={ref}
                             type="number"
+                            pattern="[0-9]*"
                             id={`number${index + 1}`}
                             name={`number${index + 1}`}
                             className={styles.inputDataCode}

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styles from './Page.module.css';
 
-const PageUseEffect = (isFirstRun, widgetCollapse, setScale) => {
+const PageUseEffect = (isFirstRun, widgetCollapse, setScale, setActiveContent) => {
     const prevWidgetCollapse = useRef(widgetCollapse);
    
     useEffect(() => {
@@ -36,6 +36,9 @@ const PageUseEffect = (isFirstRun, widgetCollapse, setScale) => {
               isFirstRun.current= false;
               
             }    
+          }
+          if (pageWidth <= 425) {
+            setActiveContent('Cashback')
           }
           setScale(newScale);
         };

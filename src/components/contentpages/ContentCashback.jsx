@@ -7,7 +7,7 @@ const ContentCashback = () => {
    const [activeInputTable, setActiveInputTable] = useState(false);
    useEffect(() => {
       const handleResize390 = () => {
-        if (window.innerWidth <= 390) {
+        if (window.innerWidth <= 425) {
          setActiveInputTable(true);
         } else {
          setActiveInputTable(false);
