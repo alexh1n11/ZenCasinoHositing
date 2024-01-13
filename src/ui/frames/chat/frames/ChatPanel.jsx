@@ -28,7 +28,7 @@ const ChatPanel = ({flag}) => {
         display: 'flex',
         alignItems: 'center',
         borderRadius: '28px',
-        backgroundImage: 'url("src/ui/frames/chat/svg/EN.png")',
+        backgroundImage: 'url("/frames/chat/EN.png")',
     }
 
     return (

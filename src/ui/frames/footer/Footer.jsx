@@ -24,7 +24,7 @@ const Footer = () => {
             <div className={styles.top}>
                 <div className={styles.betsStorm}>
                     <div style={{display: 'flex',alignItems: 'center', gap: '12px'}}>
-                        <img src="src\ui\frames\footer\src\logo.png" alt="" className="" />
+                        <img src="/frames/footer/logo.png" alt="" className="" />
                         betstorm
                     </div>
                     <div style={{display: 'flex',width: '320px'}}>

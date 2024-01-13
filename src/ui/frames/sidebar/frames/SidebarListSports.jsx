@@ -52,7 +52,7 @@ const SidebarListSports = ({flag, setActiveContent, elemStyles }) => {
          </div>
 
          <div style={elemStyles} onClick={() => handleClick('Formula')}>
-            <img src="src\ui\frames\sidebar\frames\svg\Formula.png" alt="" />
+            <img src="/frames/sidebar/Formula.png" alt="" />
             {!flag && (<>Formula 1</>)}
          </div>
 
@@ -72,7 +72,7 @@ const SidebarListSports = ({flag, setActiveContent, elemStyles }) => {
          </div>
 
          <div style={elemStyles} onClick={() => handleClick('All Esports')}>
-            <img src="src\ui\frames\sidebar\frames\svg\AllEsports.png" alt="" />
+            <img src="/frames/sidebar/AllEsports.png" alt="" />
             {!flag && (<>All Esports</>)}
          </div>
 

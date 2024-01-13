@@ -24,7 +24,7 @@ const ToggleButton = ({casinoOrSport, toggleCasinoOrSport}) => {
         width: '50%',
         height: '100%',
         backgroundColor: '#1C2438',
-        backgroundImage: "url('src/ui/frames/header/buttons/backdrop.png')",
+        backgroundImage: "url('/frames/header/backdrop.png')",
         backgroundSize: 'cover',
         borderRadius: '20px',
         marginLeft: casinoOrSport ? '50%' : '0%'

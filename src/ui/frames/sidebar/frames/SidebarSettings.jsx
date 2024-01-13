@@ -23,7 +23,7 @@ const SidebarSettings = ({flag}) => {
              padding: '12px 18px',
              gap: '12px'}
          }>
-            <img src="src\ui\frames\sidebar\frames\svg\US.png" alt="" />
+            <img src="/frames/sidebar/US.png" alt="" />
             English
          </button>
 

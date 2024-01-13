@@ -30,7 +30,7 @@ const SidebarListCasino = ({flag, setActiveContent, elemStyles }) => {
          </div>
          
          <div style={elemStyles} onClick={() => handleClick('Popular')}>
-            <img src="src\ui\frames\sidebar\frames\svg\Popular.png" alt=""  />
+            <img src="/frames/sidebar/Popular.png" alt=""  />
             {!flag && (<>Popular</>)}
          </div>
 
