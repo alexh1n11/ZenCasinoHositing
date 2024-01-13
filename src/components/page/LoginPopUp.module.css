@@ -127,6 +127,7 @@
 .terms{
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   color: #9CA3BD;
   font-size: 14px;
   font-style: normal;
